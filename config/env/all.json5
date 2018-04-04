@@ -1,0 +1,6 @@
+{
+	PORT: 3000,
+	FORCE_DB_SYNC: "false",
+    enableSequelizeLog: "true",
+    expressSessionSecret: '$uper$ecret$e$$ionKey'
+}

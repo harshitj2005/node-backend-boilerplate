@@ -1,0 +1,12 @@
+{
+    "name": "node-backend-boilerplate",
+    "description": "A basic boilerplate for nodejs backend application with support of mysql, express",
+    "repository": "https://github.com/harshitj2005/node-backend-boilerplate.git",
+    "keywords": ["node", "express", "mysql"],
+    "env": {
+        "WEB_CONCURRENCY": {
+            "description": "The number of processes to run.",
+            "value": "1"
+        }
+    }
+}

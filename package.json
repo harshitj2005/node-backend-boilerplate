@@ -1,0 +1,43 @@
+{
+  "name": "node-backend-boilerplate",
+  "description": "A basic boilerplate for nodejs backend application with support of mysql, express",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Harshit jain",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harshitj2005/node-backend-boilerplate.git"
+  },
+  "engines": {
+    "node": "8.1.x",
+    "npm": "5.6.x"
+  },
+  "scripts": {
+    "start": "",
+    "test": "mocha",
+    "postinstall": "cp config/env/development.json5.sample config/env/development.json5 && cp config/env/production.json5.sample config/env/production.json5"
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "async": "latest",
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "glob": "^6.0.1",
+    "json5": "^0.4.0",
+    "lodash": "latest",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "mysql": "^2.9.0",
+    "nconf": "^0.8.2",
+    "sequelize": "^3.13.0",
+    "serve-favicon": "^2.3.0",
+    "standard-error": "^1.1.0",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest"
+  }
+}

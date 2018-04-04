@@ -1,0 +1,24 @@
+{
+  "apps" : [{
+    "name"       : "node-backend-boilerplate",
+    "script"     : "app.js",
+    "args"        : ["--color"],
+    "watch"       : true,
+    "ignore_watch" : ["pids", "logs", "node_modules"],
+    "merge_logs"  : true,
+    "cwd"         : ".",
+    "error_file"  : "./logs/msr.log",
+    "out_file"    : "./logs/msr.log",
+    "pid_file"    : "./pids/msr.pid",
+    "min_uptime"  : "30s",
+    "max_restarts"  : 30,
+    "restart_delay" : 1000,
+    "max_memory_restart" : "8G",
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+      "NODE_ENV": "production"
+    }
+  }]
+}

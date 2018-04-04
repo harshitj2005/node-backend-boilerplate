@@ -1,0 +1,12 @@
+{
+    db: {
+        name: "node_backend",
+        password: "",
+        username: "root",
+        host:"localhost",
+        port:3306
+    },
+    app: {
+        name: "Node Backend boilerplate - Production"
+    }
+}

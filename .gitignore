@@ -1,0 +1,32 @@
+# Github Node Default
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+# From Mean Stack
+.DS_Store
+node_modules/
+public/lib
+test/coverage/
+migrations/
+
+# Configuration Files
+/config/env/development.json5
+/config/env/production.json5
+/config/env/test.json5
+
+*.local
+
+# IDE files
+.idea
+/.*.md.html
+.settings
+.project
+.classpath
+*~
+*.swp
+*.swo

@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# Developer
+
+    Harshit Jain - Senior Associate
+
+# TECHNOLOGY COLOPHON
+
+    Node.JS,Express,Mysql,Sequelize
