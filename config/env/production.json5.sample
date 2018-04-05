@@ -1,7 +1,7 @@
 {
     db: {
         name: "node_backend",
-        password: "",
+        password: "root",
         username: "root",
         host:"localhost",
         port:3306

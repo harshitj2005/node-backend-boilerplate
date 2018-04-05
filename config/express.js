@@ -3,17 +3,20 @@
 /**
  * Module dependencies.
  */
-var fs = require('fs');
-var express = require('express');
-var compression = require('compression');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var path = require('path');
+var fs = require('fs'),
+    express = require('express'),
+    compression = require('compression'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    passport = require('passport'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    methodOverride = require('method-override'),
+    path = require('path');
+    
 var config = require('config/config');
 var winston = require('config/winston');
+var strategy = require('app/middleware/strategy');
 
 module.exports = function(app) {
 
@@ -50,6 +53,8 @@ module.exports = function(app) {
     app.use(bodyParser.json());
     app.use(methodOverride());
 
+    passport.use(strategy)
+    app.use(passport.initialize());
     // Globbing routing files
     config.getGlobbedFiles('./app/routes/**/*.js').forEach(function(routePath) {
       require(path.resolve(routePath))(app);

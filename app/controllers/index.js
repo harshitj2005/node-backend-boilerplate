@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 var fs = require('fs');
-var config = require('config/config');
 
 var apiFunctions = {
     home: function(req,res){

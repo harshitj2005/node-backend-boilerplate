@@ -23,6 +23,7 @@ migrations/
 
 # IDE files
 .idea
+.vscode
 /.*.md.html
 .settings
 .project

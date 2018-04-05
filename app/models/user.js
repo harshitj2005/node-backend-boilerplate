@@ -6,18 +6,20 @@ module.exports = function(sequelize, DataTypes) {
 
 	var User = sequelize.define('User', 
 		{
+			id:{
+				type:DataTypes.INTEGER,
+				autoIncrement: true,
+				primaryKey:true
+			},
 			name: DataTypes.STRING,
 			email: DataTypes.STRING,
-			username: DataTypes.STRING,
-			hashedPassword: DataTypes.STRING,
-			salt: DataTypes.STRING,
+			password: DataTypes.STRING
 		},
 		{
 			instanceMethods: {
 				toJSON: function () {
 					var values = this.get();
-					delete values.hashedPassword;
-					delete values.salt;
+					delete values.password;
 					return values;
 				},
 				makeSalt: function() {
@@ -35,7 +37,8 @@ module.exports = function(sequelize, DataTypes) {
 				}
 			},
 			associate: function(models) {
-			}
+			},
+			timestamps:false
 		}
 	);
 
