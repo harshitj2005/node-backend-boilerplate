@@ -21,6 +21,7 @@
   "dependencies": {
     "app-module-path": "^2.2.0",
     "async": "latest",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
     "cookie-parser": "^1.4.0",

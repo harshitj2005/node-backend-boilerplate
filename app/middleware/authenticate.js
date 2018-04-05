@@ -11,7 +11,7 @@ var authenticate = {
     jwtAuth : (req, res, next) => {
         passport.authenticate('jwt', { session: false }, (err, user, info) => {
             if (err || !user) {
-                return res.status(400).jsonp({
+                return res.status(401).jsonp({
                     message: info ? info.message : 'Invalid token'
                 });
             }
