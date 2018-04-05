@@ -42,6 +42,7 @@
     "winston": "latest"
   },
   "devDependencies": {
-    "mocha": "latest"
+    "mocha": "latest",
+    "chai": "^4.1.2"
   }
 }
