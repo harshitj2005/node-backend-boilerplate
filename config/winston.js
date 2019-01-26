@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-var winston = require('winston');
+var winston = require("winston");
 var logger = new (winston.Logger)();
 
 logger.add(winston.transports.Console, {
-    level: 'verbose',
+    level: "verbose",
     prettyPrint: true,
     colorize: true,
     silent: false,
@@ -12,7 +12,7 @@ logger.add(winston.transports.Console, {
 });
 
 logger.stream = {
-    write: function(message, encoding){
+    write: function(message){
         logger.info(message);
     }
 };

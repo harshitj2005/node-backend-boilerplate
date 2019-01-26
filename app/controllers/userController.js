@@ -1,18 +1,17 @@
-'use strict';
+"use strict";
 
 /**
  * Module dependencies.
  */
-var jwt = require('jsonwebtoken');
-var bcrypt = require('bcrypt');
-var config = require('config/config');
-var db = require('config/sequelize');
-var logger = require('config/winston');
-var userModel = require('app/models/user');
+var jwt = require("jsonwebtoken");
+var bcrypt = require("bcrypt");
+var config = require("config/config");
+var db = require("config/sequelize");
+var logger = require("config/winston");
 
 var apiFunctions = {
     authenticate: (req, res) => {
-        res.status(200).jsonp({ info: 'This is authenticate' });
+        res.status(200).jsonp({ info: "This is authenticate" });
     },
     getToken: (req, res) => {
         if(req.body.email && req.body.password){
@@ -21,7 +20,7 @@ var apiFunctions = {
         }
 
         if(!email || !password){
-            return res.status(401).jsonp({message:'Email and password are required'});
+            return res.status(401).jsonp({message:"Email and password are required"});
         }
 
         db.User.findOne({
@@ -37,8 +36,8 @@ var apiFunctions = {
             });
             res.status(200).jsonp({ auth: true, token: token });
         }, err => {
-            logger.error('error occured in user find',err);
-            res.status(500).jsonp({message:'Something went wrong'});
+            logger.error("error occured in user find",err);
+            res.status(500).jsonp({message:"Something went wrong"});
         });
     },
     register: (req, res) => {
@@ -54,7 +53,7 @@ var apiFunctions = {
                 expiresIn: 86400
             });
             return res.status(200).jsonp({ auth: true, token: token });
-        }, (err) => { 
+        }, () => { 
             return res.status(500).jsonp({message:"There was a problem registering the user."});
         });
     }

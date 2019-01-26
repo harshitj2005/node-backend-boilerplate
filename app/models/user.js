@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = function(sequelize, DataTypes) {
 
-	var User = sequelize.define('User', 
+	var User = sequelize.define("User", 
 		{
 			id:{
 				type:DataTypes.INTEGER,
@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
 					return values;
 				}
 			},
-			associate: function(models) {
+			associate: function(models) {// eslint-disable-line
 			},
 			timestamps:false
 		}
