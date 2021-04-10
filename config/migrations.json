@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "user",
+    "password": "Zainwaw@123",
+    "database": "node_backend_boilerplate",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "seederStorage": "sequelize",
+    "logging": true
+  },
+  "production": {
+    "username": "user",
+    "password": "Zain1234",
+    "database": "node_backend_boilerplate",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "seederStorage": "sequelize"
+  }
+}

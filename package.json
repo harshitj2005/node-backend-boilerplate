@@ -10,8 +10,8 @@
     "url": "https://github.com/harshitj2005/node-backend-boilerplate.git"
   },
   "engines": {
-    "node": "8.1.x",
-    "npm": "5.6.x"
+    "node": "12.13.x",
+    "npm": "6.12.x"
   },
   "scripts": {
     "start": "",
@@ -19,30 +19,32 @@
     "postinstall": "cp config/env/development.json5.sample config/env/development.json5 && cp config/env/production.json5.sample config/env/production.json5"
   },
   "dependencies": {
-    "app-module-path": "^2.2.0",
-    "async": "latest",
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.14.1",
-    "compression": "^1.6.0",
-    "cookie-parser": "^1.4.0",
-    "express": "^4.13.3",
-    "glob": "^6.0.1",
-    "json5": "^0.4.0",
-    "jsonwebtoken": "^8.2.0",
-    "lodash": "latest",
-    "method-override": "^2.3.5",
-    "morgan": "^1.6.1",
-    "mysql": "^2.9.0",
-    "nconf": "^0.8.2",
-    "passport": "^0.4.0",
+    "app-module-path": "2.2.0",
+    "async": "3.2.0",
+    "bcrypt": "5.0.1",
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.5",
+    "express": "4.17.1",
+    "glob": "7.1.6",
+    "json5": "2.2.0",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.21",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "nconf": "^0.11.2",
+    "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "sequelize": "^3.13.0",
-    "serve-favicon": "^2.3.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "serve-favicon": "^2.5.0",
     "standard-error": "^1.1.0",
-    "winston": "latest"
+    "winston": "^2.4.2"
   },
   "devDependencies": {
-    "mocha": "latest",
-    "chai": "^4.1.2"
+    "mocha": "8.3.2",
+    "chai": "^4.3.4"
   }
 }

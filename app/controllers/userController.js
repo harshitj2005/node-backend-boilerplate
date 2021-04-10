@@ -54,7 +54,8 @@ var apiFunctions = {
                 expiresIn: 86400
             });
             return res.status(200).jsonp({ auth: true, token: token });
-        }, (err) => { 
+        }, (err) => {
+            logger.error("error occured in user create",err);
             return res.status(500).jsonp({message:"There was a problem registering the user."});
         });
     }

@@ -10,7 +10,6 @@ var fs = require('fs'),
     logger = require('morgan'),
     passport = require('passport'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     path = require('path');
     
@@ -49,8 +48,8 @@ module.exports = function(app) {
     app.use(cookieParser());
 
     // request body parsing middleware should be above methodOverride
-    app.use(bodyParser.urlencoded({ extended: true }));
-    app.use(bodyParser.json());
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
     app.use(methodOverride());
 
     passport.use(strategy)

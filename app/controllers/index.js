@@ -3,7 +3,8 @@
 /**
  * Module dependencies.
  */
-var fs = require('fs');
+const fs = require('fs');
+const config = require('config/config');
 
 var apiFunctions = {
     home: function(req,res){

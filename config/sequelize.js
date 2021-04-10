@@ -13,7 +13,7 @@ var sequelize =  new Sequelize(config.db.name, config.db.username, config.db.pas
         port: config.db.port,
         dialect: 'mysql',
         storage: config.db.storage,
-        logging: config.enableSequelizeLog === 'true' ? winston.verbose : false
+        logging: config.enableSequelizeLog === 'true' ? (msg) => winston.verbose(msg) : false
     });
 
 // loop through all files in models directory ignoring hidden files and this file
@@ -23,7 +23,7 @@ fs.readdirSync(config.modelsDir)
     })
     // import model files and save model names
     .forEach(function (file) {
-        var model = sequelize.import(path.join(config.modelsDir, file));
+        let model = require(path.join(config.modelsDir, file))(sequelize, Sequelize.DataTypes)
         db[model.name] = model;
     });
 
