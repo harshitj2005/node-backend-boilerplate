@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 
 /**
  * Module dependencies.
  */
-var chai = require('chai'),
-    expect = chai.expect,
-    _ = require('lodash'),
-    winston = require('../../../config/winston'),
-    User = require('../../../app/models/user');
+var chai = require("chai"),
+    expect = chai.expect,   // eslint-disable-line
+    _ = require("lodash"),  // eslint-disable-line
+    winston = require("../../../config/winston"),  // eslint-disable-line
+    User = require("../../../app/models/user");
 
 chai.should();
 
 //The tests
-describe('User model', function() {
+describe("User model", function() {
 
     var userModel;
     before(function() {
@@ -28,39 +28,39 @@ describe('User model', function() {
         };
 
         var datatypesStub = {
-            STRING: 'string',
-            INTEGER: 'integer'
+            STRING: "string",
+            INTEGER: "integer"
         };
 
         userModel = User(sequelizeStub, datatypesStub);
 
     });
 
-    describe('name', function(){
-        it('should be equal to: User', function(){
-            console.log(userModel)
-            userModel.name.should.equal('User');
+    describe("name", function(){
+        it("should be equal to: User", function(){
+            winston.info(userModel)
+            userModel.name.should.equal("User");
         });
     });
 
-    describe('data', function() {
-        it('should have username', function() {
-            userModel.fields.name.should.exist.and.equal('string');
+    describe("data", function() {
+        it("should have username", function() {
+            userModel.fields.name.should.exist.and.equal("string");
         });
-        it('should have email', function() {
-            userModel.fields.email.should.exist.and.equal('string');
+        it("should have email", function() {
+            userModel.fields.email.should.exist.and.equal("string");
         });
-        it('should have hashedPassword', function() {
-            userModel.fields.password.should.exist.and.equal('string');
+        it("should have hashedPassword", function() {
+            userModel.fields.password.should.exist.and.equal("string");
         });
     });
 
-    describe('properties', function(){
-        describe('instance methods', function(){
-            describe('makeSalt', function(){
-                it('should generate salt of length 16', function(){
+    describe("properties", function(){
+        describe("instance methods", function(){
+            describe("makeSalt", function(){
+                it("should generate salt of length 16", function(){
                     var salt = userModel.properties.instanceMethods.makeSalt();
-                    salt.should.be.a('string').with.length(24);
+                    salt.should.be.a("string").with.length(24);
                 });
             });
             // describe('encryptPassword', function(){
